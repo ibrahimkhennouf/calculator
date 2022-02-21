@@ -1,7 +1,7 @@
 export let Result = (props) => {
   let { exp, setExp } = props;
   let CalcRes = () => {
-    return setExp(eval(exp));
+    return setExp(Function("return " + exp)());
   };
   return (
     <div>
