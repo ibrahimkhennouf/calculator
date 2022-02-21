@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { ClaculsComp } from "./CalculatorComps/ClaculsComp";
+import { useState } from "react";
+import { Result } from "./CalculatorComps/Result";
 function App() {
+  let numsAndOprs = [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "+",
+    "-",
+    "/",
+    "*",
+    ".",
+  ];
+  let [exp, setExp] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h1>{exp}</h1>
+      <div className="container">
+        {numsAndOprs.map((nao) => {
+          return (
+            <ClaculsComp val={nao} exp={exp} setExp={setExp}></ClaculsComp>
+          );
+        })}
+        <Result exp={exp} setExp={setExp}></Result>
+        <button
+          onClick={() => {
+            setExp("");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }
