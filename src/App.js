@@ -14,7 +14,6 @@ function App() {
     "7",
     "8",
     "9",
-    "10",
     "+",
     "-",
     "/",
@@ -38,6 +37,13 @@ function App() {
           }}
         >
           Reset
+        </button>
+        <button
+          onClick={() => {
+            setExp(exp.slice(0, -1));
+          }}
+        >
+          DEL
         </button>
       </div>
     </div>

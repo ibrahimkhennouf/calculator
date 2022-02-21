@@ -1,8 +1,12 @@
 export let Result = (props) => {
+  const nerdamer = require("nerdamer/all.min");
+
   let { exp, setExp } = props;
   let CalcRes = () => {
-    return setExp(Function("return " + exp)());
+    var e = nerdamer(exp);
+    return setExp(e.toString());
   };
+
   return (
     <div>
       <button value="=" onClick={CalcRes}>
