@@ -1,3 +1,6 @@
+A simple calculator app with a simple designe from frontend mentor just to practice my react hooks and props knowledge .
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
