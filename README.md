@@ -1,5 +1,5 @@
 A simple calculator app with a simple designe from frontend mentor just to practice my react hooks and props knowledge .
-
+check demo at https://mysuperdupercalculator.netlify.app/.
 
 # Getting Started with Create React App
 
